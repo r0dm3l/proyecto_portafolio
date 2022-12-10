@@ -1,0 +1,18 @@
+{% extends "baseSeguridad.html" %}
+
+{% block content %}
+
+<h2 class="mt-5">inicio de sesion</h2>
+
+<form method="post" novalidate class="mt-3">
+  {% csrf_token %} 
+
+  {{ form.as_p }}
+<div>
+  <button class="btn btn-success">iniciar sesion</button>
+  <a href="{% url 'register'%}" class="btn btn-primary">Crear usuario</a>
+</div>
+ 
+</form>
+
+{% endblock content %}

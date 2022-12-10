@@ -1,0 +1,17 @@
+{% extends "baseSeguridad.html" %}
+
+{% block content %}
+<h2>registro de usuario</h2>
+
+<form method="post" novalidate class="mt-3">
+  {% csrf_token %} 
+
+  {{ form.as_p }}
+<div>
+  <button type="submit "class="btn btn-success">registrar</button>
+  <a href="{% url 'index'%}" class="btn btn-secundary">volver</a>
+
+</div>
+ 
+</form>
+{% endblock content %}
